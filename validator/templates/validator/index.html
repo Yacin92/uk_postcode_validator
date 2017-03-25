@@ -1,0 +1,6 @@
+<form  action="{% url 'validator:validate'%}" method="POST">
+    {% csrf_token %}
+    <input type="text" name="postcode" value="">
+    <button type="submit" name="button">verify</button>
+
+</form>
