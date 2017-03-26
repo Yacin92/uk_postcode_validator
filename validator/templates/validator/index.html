@@ -1,6 +1,19 @@
-<form  action="{% url 'validator:validate'%}" method="POST">
-    {% csrf_token %}
-    <input type="text" name="postcode" value="">
-    <button type="submit" name="button">verify</button>
 
-</form>
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        {% load staticfiles%}
+        <link rel="stylesheet" href="{% static 'validator/Semantic-UI-CSS-master/semantic.min.css'%}">
+        <title></title>
+    </head>
+    <body>
+        <form  action="{% url 'validator:validate'%}" method="POST">
+            {% csrf_token %}
+            <div class="ui action input">
+                <input name="postcode" type="text">
+                <button class="ui button" type="submit">Verify</button>
+            </div>
+        </form>
+    </body>
+</html>
